@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 
+import { PoMenuItem } from '@po-ui/ng-components';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'financial-control';
+
+  readonly menus: Array<PoMenuItem> = [
+    { label: 'Dashboard', link: "/"}
+  ];
+
+  private onClick() {
+    alert('Clicked in menu item')
+  }
+
 }

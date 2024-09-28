@@ -1,0 +1,21 @@
+<po-list-view p-property-title="description" [p-items]="items">
+    <ng-template p-list-view-content-template let-item>
+        <div class="po-row">
+            <div class="po-row">
+                <po-info class="po-md-3" p-label="Valor" [p-value]="item.amount"></po-info>
+                <po-info class="po-md-3" p-label="Data" [p-value]="formatDate(item.date)"></po-info>
+                @if(item.type == 'expense'){
+                <po-info class="po-md-3" p-label="Tipo" p-value="Gasto"></po-info>
+                }@else {
+                <po-info class="po-md-3" p-label="Tipo" p-value="Recebimento"></po-info>
+                }
+                <po-info class="po-md-3" p-label="Categoria" [p-value]="item.category"></po-info>
+            </div>
+            <div class="po-row">
+
+                <po-info class="po-md-6" p-label="Status" [p-value]="item.status"></po-info>
+                <po-info class="po-md-6" p-label="Método de Pagamento" [p-value]="item.paymentMethod"></po-info>
+            </div>
+        </div>
+    </ng-template>
+</po-list-view>
