@@ -96,6 +96,14 @@ export class TransactionService {
     this.transactionSubject.next(transactions)
   }
 
+  addTransaction(newTransaction: Transaction) {
+    let newList = this.transactionSubject.value    
+    newTransaction['date'] = new Date('2024-09-15')
+    newTransaction['status'] = 'pending'
+    newList.push(newTransaction);
+    this.transactionSubject.next(newList)
+  }
+
 
 }
 

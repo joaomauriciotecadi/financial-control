@@ -1,0 +1,8 @@
+<div class="po-row" style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+    <po-dynamic-form #dynamicForm [p-fields]="fields">
+    </po-dynamic-form>
+    <div class="po-row po-mb-2">
+        <po-button class="po-md-12" p-kind="primary" p-label="Confirmar" [p-disabled]="handleDisabled()"
+            (p-click)="create(); dynamicForm.form.reset()"></po-button>
+    </div>
+</div>

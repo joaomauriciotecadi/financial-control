@@ -1,3 +1,16 @@
 <po-page-default p-title="Dashboard">
+    <div class="po-row po-mb-2">
+        <div class="po-md-10"></div>
+        <po-button class="po-md-2" p-label="Adicionar novo movimento" p-kind="primary"
+            (p-click)="newTransactionModal.open()"></po-button>
+    </div>
     <app-transaction-list></app-transaction-list>
+
+    <po-page-slide #newTransactionModal p-title="Adicionar novo movimento">
+        @if(!newTransactionModal.hidden){
+        <app-transaction-add (createNewTransaction)="createNewTransaction($event)"></app-transaction-add>
+        }
+    </po-page-slide>
+
+
 </po-page-default>

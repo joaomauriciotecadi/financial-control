@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TransactionListComponent } from './components/dashboard/transaction-list/transaction-list.component';
+import { TransactionAddComponent } from './components/dashboard/transaction-add/transaction-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    TransactionListComponent
+    TransactionListComponent,
+    TransactionAddComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class TransactionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.transactionService.transaction$.subscribe({
-      next: (data) => {
+      next: (data) => {        
         this.items = data
       }
     })
